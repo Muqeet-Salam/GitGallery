@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Image Viewer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <h1>GitHub Image Viewer</h1>
+    <form id="repo-form">
+      <input id="repo-input" type="text" placeholder="https://github.com/owner/repo" required>
+      <button type="submit">Load Images</button>
+    </form>
+    <label class="controls">
+      <input id="recursive-toggle" type="checkbox" unchecked>
+      Click to include all images in subfolders (only images in current folder will be shown if unchecked)
+    </label> <br></br
+    <text>Navigate to folders to view images in a particular folder</text>
+    <div id="breadcrumbs" class="breadcrumbs"></div>
+    <div class="workspace">
+      <aside class="folders">
+        <h2>Folders</h2>
+        <div id="folder-list" class="folder-list"></div>
+      </aside>
+      <section class="content">
+        <div id="pagination" class="pagination">
+          <button id="prev-page" type="button">Previous</button>
+          <span id="page-info">Page 1</span>
+          <button id="next-page" type="button">Next</button>
+          <span id="status"></span>
+        </div>
+        <div id="gallery" class="gallery"></div>
+      </section>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
